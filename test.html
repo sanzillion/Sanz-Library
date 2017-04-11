@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+//Setup
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["Javascript", "Gaming", "Foxes"]
+    }
+];
+var objs = contacts[3];
+console.log(objs['likes']);
+
+function lookUpProfile(firstName, prop){
+	var result = "";
+// Only change code below this line
+  for(var i = 0; i < contacts.length; i++){
+      if(contacts[i].firstName == firstName){
+        if(contacts[i].hasOwnProperty[prop]){
+        	var obj = contacts[i];
+          return result = obj[prop];
+        }
+        else{
+          result = "No such property";
+        }
+      }
+      else{
+        result = "No such contact";
+      }
+    }
+    return result;
+// Only change cod above this line
+}
+
+</script>
+
+<script type="text/javascript">
+	function randomRange(myMin, myMax) {
+
+  return Math.floor(Math.random() * (myMax - myMin + 1) + myMin); // Change this line
+
+}
+
+// Change these values to test your function
+var myRandom = randomRange(8, 10);
+
+var min = 5;
+var max = 10;
+console.log("Min = "+min);
+console.log("Max = "+max);
+var a = Math.random(); 
+console.log(a);
+var b = (max - min + 1)
+console.log(b);
+console.log(a *= b);
+console.log(a += min);
+console.log(Math.floor(a));
+</script>
+
+<script type="text/javascript">
+	console.log("Regex");
+	var testString = "There are 3 cats but 4 dogs.";
+
+	// Only change code below this line.
+
+	var expression = /\d+/g;  // Change this line
+
+	// Only change code above this line
+
+	// This code counts the matches of expression in testString
+	var digitCount = testString.match(expression).length;
+	console.log(testString.match(expression));
+	console.log(digitCount);
+</script>
+
+<script type="text/javascript">
+	console.log("Object Oriented Programming in Javascript");
+
+		var Car = function() {
+		  this.wheels = 4;
+		  this.engines = 1;
+		  this.seats = 5;
+		};
+
+		// Only change code below this line.
+
+		var myCar = new Car();
+		  myCar.nickname = "Careton";
+		  console.log(myCar);
+		  console.log(myCar.wheels);
+
+	console.log("OOP with parameters inside constructors");
+		var Car = function(wheels, seats, engines) {
+		  //Change this constructor
+		  this.wheels = wheels;
+		  this.seats = seats;
+		  this.engines = engines;
+		};
+
+	//Try it out here
+	var myCar = new Car(5, 4, 3);
+</script>
+
+<script type="text/javascript">
+	console.log("More OOP");
+	
+var Car = function() {
+  // this is a private variable
+  var speed = 10;
+
+  // these are public methods
+  this.accelerate = function(change) {
+    speed += change;
+  };
+
+  this.decelerate = function() {
+    speed -= 5;
+  };
+
+  this.getSpeed = function() {
+    return speed;
+  };
+};
+
+var Bike = function() {
+
+  // Only change code below this line.
+  var gear;
+  
+  this.getGear = function() {
+    return this.gear;
+  };
+  
+  this.setGear = function(gear) {
+    this.gear = gear;
+  };
+};
+
+var myCar = new Car();
+var myBike = new Bike();
+myBike.setGear(4);
+myBike.getGear();
+
+</script>
