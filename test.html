@@ -132,7 +132,7 @@ console.log(Math.floor(a));
 
 <script type="text/javascript">
 	console.log("More OOP");
-	
+
 var Car = function() {
   // this is a private variable
   var speed = 10;
@@ -169,5 +169,49 @@ var myCar = new Car();
 var myBike = new Bike();
 myBike.setGear(4);
 myBike.getGear();
+
+
+console.log("Map function!");
+
+var arr = [1,2,3,4];
+console.log(arr);
+var newarr = arr.map(function(val){
+	return val + 1;
+});
+console.log(newarr);
+
+console.log("Reduce Function");
+var array = [4,5,6,7,8];
+var singleVal = 0;
+
+// Only change code below this line.
+
+singleVal = array.reduce(function(pVal, currVal){
+  return pVal + currVal;
+}, 0);
+
+console.log("Filter Function");
+var oldArray = [1,2,3,4,5,6,7,8,9,10];
+
+// Only change code below this line.
+
+var newArray = oldArray.filter(function(val){
+  return val < 6;
+});
+
+console.log("Sort and Reverse Method");
+var array = [1, 12, 21, 2];
+
+// Only change code below this line.
+
+array.sort(function(a,b){
+  return b - a;
+});
+console.log(array);
+var newarr = array.sort();
+console.log(newarr);
+newarr.reverse();
+console.log(newarr);
+
 
 </script>
