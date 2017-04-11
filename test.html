@@ -213,5 +213,63 @@ console.log(newarr);
 newarr.reverse();
 console.log(newarr);
 
+console.log("Reverse a string");
+function reverseString(str) {
+  var arr = str.split('');
+  arr.reverse();
+  var s = arr.join('');
+  return s;
+}
 
+console.log(reverseString("hello"));
+
+	var b = 1;
+  for(var i = 2; i <= 5; i++){
+    b = b * i;
+    console.log(b);
+  }
+
+console.log("Palindrome");
+function palindrome(str) {
+	
+  var rgx = /[^\d\w+]/g;
+  str = str.toLowerCase();
+  var arr = str.match(rgx);
+
+  if(str.match(rgx)){
+  	for(var i = 0; i < arr.length; i++){
+  	str = str.replace(arr[i], '');
+  	}
+  }
+  
+
+  var mid = str.length/2;
+  var newstr = str.split('');
+  var str1 = [];
+  var str2 = [];
+  var shit = 0;
+
+  for(var i = 0; i <= mid-1; i++){
+  	str1[i] = newstr[i];
+  }
+  console.log(newstr);
+  console.log("this one: "+newstr[mid]);
+  
+  for(var i = mid; i < newstr.length; i++){
+  	str2[shit] = newstr[i];
+  	shit++;
+  }
+	str2 = str2.reverse();
+
+	//compare
+	for(var i = 0; i < str2.length; i++){
+		if(str1[i] != str2[i]){
+			return "false";
+		}
+	}
+
+	return "true";
+}
+
+console.log(palindrome("nasdfad"));
 </script>
